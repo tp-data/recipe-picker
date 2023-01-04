@@ -2,22 +2,47 @@
 <html lang="en">
 <head>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="style.css">
 <meta charset="utf-8" name="viewport">
 <title>Recipe Picker</title>
 </head>
+
 <body>
 
 <div>
     <h2>Recipe Picker</h2>
     <p>Click below to generate random recipe from a preset list.</p>
 </div>
-<div id="picker">
-    <input id="click" type="button" value="Click for Random Recipe"></input>
-    <div id="svg-container"><h4></h4></div>
-    <div id="svg-container"><h5></h5></div>
-</div>
 
+<div id="picker">
+    <button id="click">Click for Random Recipe</button>
+    <table>
+        <tr>
+            <td>Random Meal:</td>
+            <td>
+                <div id="svg-container">
+                    <h4>No Meal Generated</h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Ingredient List:</td>
+            <td>
+                <div id="svg-container">
+                    <ul id='ul'></ul>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Link:</td>
+            <td>
+                <div id="svg-container">
+                    <a id="link_id">Link</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
-<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript" src="picker.js"></script>
 </html>
