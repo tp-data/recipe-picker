@@ -40,7 +40,9 @@ var links = [
     
     // Display Recipe 
     var recipe = recipes[ansIndex];
-    $("#svg-container h4").text(recipe);
+    $("#svg-container h1").text(recipe);
+    console.log(recipe);
+
 
     // Display Ingredients 
     var ingredient = ingredients[ansIndex];
@@ -50,15 +52,53 @@ var links = [
     var charArry = ingredient.split('; ');
     let ul = document.querySelector('#ul')
     charArry.forEach(liTxt => {
-    let li = document.createElement('li')
+    var li = document.createElement('li')
+    li.setAttribute('type', 'checkbox');
     li.innerHTML = liTxt
     ul.appendChild(li)
     })
+    console.log(ingredient);
+
 
     // Display Link 
     var link = links[ansIndex];
     var link_id = document.querySelector('#link_id')
     link_id.href = link;
     link_id.style.display = "block";
-    
+    console.log(link);
+
   });
+
+
+
+
+// d3.csv("/meals.csv").then(function(data) {
+//   console.log(data);
+// });
+
+
+
+// const input = csvFile.files[0];
+// const reader = new FileReader();
+
+// reader.onload = function (e) {
+//   const text = e.target.result;
+//   const data = csvToArray(text);
+//   document.write(JSON.stringify(data));
+// };
+
+// reader.readAsText(input);
+
+
+
+// console.log(csvFile);
+
+// console.log(csvArray[1][2])
+// var csv_file = new File([""], 'meals.csv');
+// csv_file.open('r');
+// csv_file.encoding = 'utf-8';
+// var data = csv_file.read().split('/\r\n|\n/'); // split by lines
+// csv_file.close();
+// for (var row in data) data[row].split(','); // split all lines by comas
+
+// alert(data); // here is your 2d array
