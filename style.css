@@ -1,6 +1,6 @@
 body {
     margin: 0 20px;
-    background-color: #eee;
+    background-color: #fff;
     font-family: Helvetica;
 }
 
@@ -12,7 +12,7 @@ body {
 
   }
 
-#column1 {width: 40%;}
+#column1 {width: 40%; }
 #column2 {width: 60%;}
   
   /* Clear floats after the columns */
@@ -54,13 +54,28 @@ ul {
     margin: 0px;
 }
 
-#image {
+li {
+    padding: 8px 0px;
+    background-color: #f6f6f6;
+}
+li:nth-child(odd) {
+    background-color: #efefef;
+}
+.ingredient_list {
     height: 300px;
-    border: 1px solid black;
-    margin: 10px;
+    overflow: scroll;
 }
 
-table {
+#image {
+    height: 180px;
+    border: 1px solid black;
+}
+#image {
+    text-align: center;
+    padding: 120px 0px 0px 0px;
+}
+
+/* table {
     width: 500px;
 }
 
@@ -72,7 +87,7 @@ td {
 td:first-child {
     width: 120px;
     vertical-align: top;
-}
+} */
 
 #link_id {
     display: none;
