@@ -9,100 +9,36 @@
 
 <body>
 
-<!-- <div>
-    <h2>Recipe Picker</h2>
-    <p>Click below to generate random recipe from a preset list.</p>
-</div>
-
-<div id="picker">
-    <button id="click">Click for Random Recipe</button>
-    <table>
-        <tr>
-            <td>Random Meal:</td>
-            <td>
-                <div id="svg-container">
-                    <h4>No Meal Generated</h4>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Ingredient List:</td>
-            <td>
-                <div id="svg-container">
-                    <ul id='ul'></ul>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>Link:</td>
-            <td>
-                <div id="svg-container">
-                    <a id="link_id">Link</a>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div> -->
 <div>
     <h2>Recipe Picker</h2>
     <p>Click below to generate random recipe from a preset list.</p>
     <button id="click">Click for Random Recipe</button>
-
 </div>
 
-<div class="row">
-    <div id= "column1" class="column">
+<div class="section">
+    <div id= "column-left" class="column">
         <div id="image">image here</div>
         <div>
             <h3>Ingredients</h3>
-                <div id="svg-container" class="ingredient_list">
-                    <ul id='ul'></ul>
+                <div id="ingredients" class="ingredient_container">
+                    <ul id='ingredients_list'></ul>
                 </div>
         </div>
     </div>
-    <div id= "column2" class="column">
-    
-        <div id="picker">            
-                <div>
-                        <div id="svg-container">
-                            <h1>No Meal Generated</h1>
-                        </div>
-                </div>
-                <p>Instructions (TBA)</p>
-                        <div id="svg-container">
-                            <a id="link_id">Link</a>
-                        </div>
-            </div>
+    <div id= "column-right" class="column">
+        <div id="meal_container">
+            <h1>No Meal Generated</h1>
+        </div>
+        <div id="link_container">
+            <a id="link">Link</a>
+        </div>
+        <h3>Instructions</h3>
+        <div id="instructions" class="instruction_container">
+            <ul id='instructions_list'></ul>
+        </div>
     </div>
   </div>
 
-<!-- <div>image</div>
-<div>
-    <p>Ingredient List:</p>
-        <div id="svg-container">
-            <ul id='ul'></ul>
-        </div>
-</div>
-
-<div id="picker">
-    <button id="click">Click for Random Recipe</button>
-    
-        <div>
-            <p>Random Meal:</p>
-                <div id="svg-container">
-                    <h4>No Meal Generated</h4>
-                </div>
-        </div>
-        <div>
-            <p>Link:</p>
-                <div id="svg-container">
-                    <a id="link_id">Link</a>
-                </div>
-        </div>
-
-
-    
-</div> -->
 </body>
 <script type="text/javascript" src="picker.js"></script>
 </html>

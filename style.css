@@ -4,7 +4,6 @@ body {
     font-family: Helvetica;
 }
 
-/* Create two equal columns that floats next to each other */
 .column {
     float: left;
     padding: 10px;
@@ -12,29 +11,15 @@ body {
 
   }
 
-#column1 {width: 40%; }
-#column2 {width: 60%;}
+#column-left {width: 40%; }
+#column-right {width: 60%;}
   
-  /* Clear floats after the columns */
-  .row:after {
+  .section:after {
     content: "";
     display: table;
     clear: both;
     box-sizing: border-box;
   }
-
-#picker {
-    position: relative;
-}
-
-#svg-container {
-    color: #000000;
-}
-
-#svg-container>h4 {
-    margin: 0px;
-    display: inline-block;
-}
 
 #click {
     display: block;
@@ -61,7 +46,7 @@ li {
 li:nth-child(odd) {
     background-color: #efefef;
 }
-.ingredient_list {
+.ingredient_container {
     height: 300px;
     overflow: scroll;
 }
@@ -69,26 +54,10 @@ li:nth-child(odd) {
 #image {
     height: 180px;
     border: 1px solid black;
-}
-#image {
     text-align: center;
     padding: 120px 0px 0px 0px;
 }
 
-/* table {
-    width: 500px;
-}
-
-td {
-    padding: 20px;
-    border: 1px solid black;
-}
-
-td:first-child {
-    width: 120px;
-    vertical-align: top;
-} */
-
-#link_id {
+#link {
     display: none;
 }
