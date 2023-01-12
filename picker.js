@@ -34,23 +34,35 @@ var links = [
     "https://littlespicejar.com/lemon-pepper-wings/"
   ];
 
+  var instructions = [
+    "Wash and shred kale, removing spines first.; Peel and chop sweet potato.; Preheat oven to 350°F.; Place sweet potato in bowl and toss with 1 tablespoon olive oil and few dashes of salt. Place on parchment-line baking sheet and bake until soft and edges are browned, about 20 minutes.; Meanwhile, place kale in large bowl. Massage for 3 minutes until softened.; Add remaining oil, vinegar, garlic, and maple syrup to a mason jar. Shake to emulsify.; When sweet potatoes are done, remove from oven and let cool. Add to kale along with walnuts and feta cheese [if using].; Toss with dressing just before serving.",
+    "Optional: cut a slit along the bone of the chicken thigh to open up the chicken, this will help the chicken fry more evenly and the chicken to not curl up.; Marinate the chicken with soy sauce, minced garlic, garlic powder, black pepper, and Chinese cooking wine for at least 20 minutes or overnight.; To prepare the batter, mix corn starch, rice flour, eggs, garlic powder, paprika, chili powder, chicken powder, season with salt and pepper, and ice-cold soda water.; Add in the chicken and let it rest for 5-10 minutes.; In a pan, add in oil (I am using grapeseed oil), and bring it to 150 C. Add the chicken legs into the oil and fry for 6-7 minutes.; Remove the chicken, increase the heat to 180 C and fry for another 2-3 minutes or until crispy and golden brown.;",
+    "Preheat your oven to 375F and move the rack to the top third of the oven. Boil a salted pot of water and cook the ziti for 2-3 minutes less than package directions indicate. Drain and set aside once it's done.; Meanwhile, add the sausage meat and onion to a pot and cook until browned (about 7-10 minutes), stirring occasionally.; Add the garlic, Italian seasoning, and red pepper flakes to the pot and cook for about a minute.; Stir in the crushed tomatoes, cream, salt & pepper, and sugar. Let it heat through (about 5 minutes).; Drain the pasta and add it to the pot. Toss with the sauce.; Add half the pasta mixture to a 9x13 casserole dish (spread it out evenly to create your bottom layer).; Spoon the ricotta over the pasta for the cheesy middle layer (you don't need to be too neat... I just put dollops here and there).; Spoon the remaining pasta into the casserole dish to create an even top layer (I don't stir it).; Sprinkle the parmesan and mozzarella over top.; Bake, uncovered, for 20 minutes (or until hot & bubbly), and then broil (watch it closely) to brown the cheese.; Serve with some fresh basil and/or parsley if desired.",
+    "",
+    "",
+    "Prepare to bake. Preheat the oven to 350ºF. Line a 12 cup muffin pan with cupcake liners.; Mix the dry ingredients. In a medium mixing bowl, combine the flour, baking powder, and salt. Stir with a whisk to combine. Set aside.; Mix the wet ingredients. In a separate mixing bowl, cream the butter and sugar on medium speed until creamy. Turn the mixer to low, beat in the vanilla, and then beat in the eggs, one at a time, mixing well after each addition. Add in the crushed pineapple and its juice. Add the flour mixture, mixing just until combined.; Bake. Divide the batter evenly among the prepared muffin cups. Bake for 15 to 20 minutes or until a wooden toothpick inserted into the centers comes out clean.; Cool the cupcakes in the pan for 5 minutes before transferring them to a wire rack to cool completely. Top with buttercream frosting of your choice.",
+    "",
+    "",
+    "",
+  ];
+
   $("#click").on('click', function(evt) {
     // pick random recipe, then show in console
     var ansIndex = Math.floor(Math.random() * (recipes.length));
     
     // Display Recipe 
     var recipe = recipes[ansIndex];
-    $("#svg-container h1").text(recipe);
+    $("#meal_container h1").text(recipe);
     console.log(recipe);
 
 
     // Display Ingredients 
     var ingredient = ingredients[ansIndex];
     
-    document.getElementById(`ul`).innerHTML = "";
+    document.getElementById(`ingredients_list`).innerHTML = "";
     
     var charArry = ingredient.split('; ');
-    let ul = document.querySelector('#ul')
+    let ul = document.querySelector('#ingredients_list')
     charArry.forEach(liTxt => {
     var li = document.createElement('li')
     li.setAttribute('type', 'checkbox');
@@ -59,46 +71,27 @@ var links = [
     })
     console.log(ingredient);
 
+    // Display Instructions 
+    var instruction = instructions[ansIndex];
+
+    document.getElementById(`instructions_list`).innerHTML = "";
+    
+    var charArry = instruction.split('; ');
+    let instruction_ul = document.querySelector('#instructions_list')
+    charArry.forEach(liTxt => {
+    var li = document.createElement('li')
+    li.setAttribute('type', 'checkbox');
+    li.innerHTML = liTxt
+    instruction_ul.appendChild(li)
+    })
+    console.log(instruction);
+
 
     // Display Link 
     var link = links[ansIndex];
-    var link_id = document.querySelector('#link_id')
+    var link_id = document.querySelector('#link')
     link_id.href = link;
     link_id.style.display = "block";
     console.log(link);
 
   });
-
-
-
-
-// d3.csv("/meals.csv").then(function(data) {
-//   console.log(data);
-// });
-
-
-
-// const input = csvFile.files[0];
-// const reader = new FileReader();
-
-// reader.onload = function (e) {
-//   const text = e.target.result;
-//   const data = csvToArray(text);
-//   document.write(JSON.stringify(data));
-// };
-
-// reader.readAsText(input);
-
-
-
-// console.log(csvFile);
-
-// console.log(csvArray[1][2])
-// var csv_file = new File([""], 'meals.csv');
-// csv_file.open('r');
-// csv_file.encoding = 'utf-8';
-// var data = csv_file.read().split('/\r\n|\n/'); // split by lines
-// csv_file.close();
-// for (var row in data) data[row].split(','); // split all lines by comas
-
-// alert(data); // here is your 2d array
