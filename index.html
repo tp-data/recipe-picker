@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" href="style.css">
 <meta charset="utf-8" name="viewport">
 <title>Recipe Picker</title>
@@ -12,7 +14,7 @@
 <div>
     <h2>Recipe Picker</h2>
     <p>Click below to generate random recipe from a preset list.</p>
-    <button id="click">Click for Random Recipe</button>
+    <button class="pulse-button" id="click">Click for Random Recipe</button>
 </div>
 
 <div class="section">
@@ -30,11 +32,12 @@
             <h1>No Meal Generated</h1>
         </div>
         <div id="link_container">
-            <a id="link">Link</a>
+            <a id="link" style="text-decoration: none;">
+                Link <i class="fa fa-link" style="font-size:16px"></i></a>
         </div>
         <h3>Instructions</h3>
         <div id="instructions" class="instruction_container">
-            <ul id='instructions_list'></ul>
+            <ol id='instructions_list'></ol>
         </div>
     </div>
   </div>
