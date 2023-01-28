@@ -3,44 +3,45 @@
 <head>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 <meta charset="utf-8" name="viewport">
-<title>Recipe Picker</title>
+<title>Recipe Generator</title>
 </head>
 
 <body>
 
-<div>
-    <h2>Recipe Picker</h2>
-    <p>Click below to generate random recipe from a preset list.</p>
-    <button class="pulse-button" id="click">Click for Random Recipe</button>
+<button class="button_pulse" id="recipe_picker">
+    <i id='meal_icon' class="fas fa-hotdog"></i>
+</button>
+
+<div id = "title">
+    <h2>Recipe Generator</h2>
+    <p>Click the button above to generate a recipe.</p>
 </div>
 
-<div class="section">
-    <div id= "column-left" class="column">
-        <div id="image">image here</div>
-        <div>
-            <h3>Ingredients</h3>
-                <div id="ingredients" class="ingredient_container">
-                    <ul id='ingredients_list'></ul>
-                </div>
-        </div>
+<div id= "column-left" class="column">
+    <div id="image"></div>
+    <div>
+        <h3>Ingredients</h3>
+            <div id="ingredient_container" class="ingredients">
+                <ul id='ingredients_list'></ul>
+            </div>
     </div>
-    <div id= "column-right" class="column">
-        <div id="meal_container">
-            <h1>No Meal Generated</h1>
-        </div>
-        <div id="link_container">
-            <a id="link" style="text-decoration: none;">
-                Link <i class="fa fa-link" style="font-size:16px"></i></a>
-        </div>
-        <h3>Instructions</h3>
-        <div id="instructions" class="instruction_container">
-            <ol id='instructions_list'></ol>
-        </div>
+</div>
+<div id= "column-right" class="column">
+    <div id="meal_container">
+        <h2>No Meal Generated</h2>
     </div>
-  </div>
+    <div id="link_container">
+        <a id="link">
+            Link <i class="fa fa-link"></i></a>
+    </div>
+    <h3>Instructions</h3>
+    <div id="instruction_container" class="instructions">
+        <ol id='instructions_list'></ol>
+    </div>
+</div>
 
 </body>
 <script type="text/javascript" src="picker.js"></script>
