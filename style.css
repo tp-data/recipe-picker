@@ -1,10 +1,17 @@
 body {
     margin: 0 20px;
-    background-color: rgb(238, 239, 183);
+    background-color: rgb(223, 250, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#title {
+    text-align: center;
+    display: block;
+    padding: 120px 0px 0px 0px;;
+}
+
 .column {
+    display: none;
     float: left;
     padding: 10px;
     box-sizing: border-box;
@@ -12,98 +19,111 @@ body {
   }
 
 #column-left {width: 40%; }
+
 #column-right {width: 60%;}
-  
-  .section:after {
-    content: "";
-    display: table;
-    clear: both;
-    box-sizing: border-box;
-  }
 
-#click {
-    display: block;
-    width: 200px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-    border: 1px solid #000;
-}
-
-#click:active {
+#recipe_picker:active {
     box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25); 
     transform: scale(.9);
 }
 
+#meal_icon {
+    background-color: rgb(95, 189, 233);
+    font-size: 20px;
+}
+
+.button_pulse {
+    position: fixed;
+    top: 20px;
+    right: 20px; 
+    width: 50px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(99, 91, 91, 0.7);
+    border-radius: 50%;
+    background-color: rgb(95, 189, 233);
+    cursor: pointer;
+    -webkit-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+.button_pulse:hover {
+  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 12px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 12px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 12px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 12px rgba(232, 76, 61, 0);}}
+
+#meal_container h2 {
+    padding: 20px 0px 0px 0px; width: 75%;
+}
+
 ul {     
-    padding: 0 0px;
+    padding: 0px;
     margin: 0px;
 }
 
 li {
     border-top: solid black .05px;
-    border-bottom: solid black .05px;
     padding: 16px 0px;
     background-color: transparent;
 }
-li:nth-child(odd) {
-    background-color: transparent;
-}
-.ingredient_container {
+
+#ingredient_container {
     height: 390px;
     overflow: scroll;
 }
 
-.instruction_container {
-    height: 600px;
+#instruction_container {
+    height: 700px;
     overflow: scroll;
 }
 
 #image {
-    height: 180px;
-    border: 1px solid black;
-    text-align: center;
-    padding: 120px 0px 0px 0px;
-}
+    width: 95%;
+    max-width: 500px;
+    margin:auto;
+    padding: 30px 0px}
 
 #link {
     display: none;
+    font-size:16px;
+    text-decoration: none;
 }
 
-#ingredients_list {list-style: none; }
-#ingredients_list input {text-align: center; float: left; margin-left: -30px}
-#ingredients_list li {padding-left: 40px;}
-#instructions_list ol {margin-left: -20px;}
-#instructions_list li {padding-left: 10px;}
-li::marker {font-size: 20px;}
 
-
-
-
-
-.pulse-button {
-
-  position: relative;
-  /* width: 100px; */
-  /* height: 100px; */
-  border: none;
-  box-shadow: 0 0 0 0 rgba(99, 91, 91, 0.7);
-  border-radius: 50%;
-  background-color: #e9e9e9;
-  /* background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/173024/jonathanlarradet_copy.png); */
-  /* background-size:cover; */
-  /* background-repeat: no-repeat; */
-  cursor: pointer;
-  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-}
-.pulse-button:hover 
-{
-  -webkit-animation: none;-moz-animation: none;-ms-animation: none;animation: none;
+#ingredients_list input {    
+    /* position: relative;     */
+    vertical-align: middle; 
+    float: left; 
+    margin-left: -30px;  
+    height: 15px; 
+    width: 15px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.55); 
 }
 
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 25px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 25px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 25px rgba(232, 76, 61, 0);}}
-@keyframes pulse {to {box-shadow: 0 0 0 25px rgba(232, 76, 61, 0);}}
+#ingredients_list input:checked {
+    accent-color:rgb(62, 62, 62);    
+    box-shadow: none; 
+}
+
+
+#ingredients_list li {
+    padding-left: 40px;    
+}
+
+#instructions_list ol {
+    margin-left: -20px;
+}
+
+#instructions_list li {
+    padding-left: 10px;
+}
+
+li::marker {
+    font-size: 20px;
+}
