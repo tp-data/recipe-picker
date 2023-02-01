@@ -12,7 +12,7 @@
       let obj;
       const res = await fetch('meals.json')
       obj = await res.json();
-      const ansIndex = Math.floor(Math.random() * (8));
+      const ansIndex = Math.floor(Math.random() * (10));
       
       // Display recipe 
       const recipe = obj.meals[ansIndex].recipe;
